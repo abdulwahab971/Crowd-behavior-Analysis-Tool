@@ -1,0 +1,217 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+    <!--###################### Slider Starts Here ############################-->
+    <div id="home" class="banner-container no-padding "  >
+        <div class="container" >
+            <div class="row mx-auto">
+
+            </div>
+            <div class="slider-det">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <span></span>
+                            <h3>Welcome to Smart Security</h3>
+                            <h2>An Automated Crowd Behaviour Analysis Tool for Real Time Surveillance</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h4>Smart Security</h4>
+                            <h2>Professional protection made Simple</h2>
+                           <p>Action recognition has become a hot topic within computer vision.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h4>Smart Security</h4>
+                            <h2>This System will also detect Running from surveillance camera's.</h2>
+                            <p>Action recognition has become a hot topic within computer vision</p>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+     <div class="services-container container-fluid">
+        <div class="container sess-in-cont">
+            <div class="session-title row">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <img src="{% static 'WebAdmin/assets/images/about.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12 txtr">
+                        <h4>Why choose Smart Security <br>
+
+                        </h4>
+                        <p>We live in a society that relies heavily on the usage of CCTV cameras for ensuring high security levels. However,
+                            such an approach is highly controversial as we usually use CCTV footages only hours or even days after the incident have already happened.
+                            It provides valuable evidence in court but is rarely used to prevent crime or react to it in real-time.
+                            The reason for such inefficiency is that the task of monitoring huge quantities of CCTV footage is mainly performed by a limited number of security staff members.
+                            An efficient surveillance system is a large-scale computer vision, data analysis, and decision making challenge. Hence the ‘smart’ approach to extracting information from the surveillance footages
+                            employs the synergy of several innovative technologies that power the next key components of the Smart Security+ Systems
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <section class="with-medical">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <img src="assets/images/about.jpg" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12 txtr">
+
+                    <h4>Why choos Smart Security  <br>
+                        <span>Smart Security</span>
+                    </h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque libero, pulvinar et elementum quis, facilisis eu ante. Mauris non placerat sapien. Pellentesque tempor arcu non odio scelerisque ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.</p>
+                    <p>Ut ultricies lacus a rutrum mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta dolor quis felis pulvinar dignissim. Etiam nisl ligula, ullamcorper non metus vitae, maximus efficitur mi. Vivamus ut ex ullamcorper, scelerisque lacus nec, commodo dui. Proin massa urna, volutpat vel augue eget, iaculis tristique dui. </p>
+                </div>
+
+            </div>
+        </div>
+    </section>  -->
+
+
+
+    <!--###################### Services Starts Here ############################-->
+    <!-- <div class="services-container container-fluid">
+        <div class="container sess-in-cont">
+            <div class="session-title row">
+                <h2>Our Services</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis magna odio, eu
+                    vehicula augue suscipit ac. Pellentesque quis dui lorem. </p>
+            </div>
+            <div class="sess-row row">
+                <div class="col-md-4">
+                    <div class="serv-det">
+                        <figure class="imghvr-fade">
+                            <img src="assets/images/services/s1.jpg" alt="">
+                            <figcaption>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis magna
+                                odio, eu vehicula augue suscipit ac. Pellentesque quis dui lorem. Vestibulum sed blandit
+                                diam,
+                            </figcaption>
+                        </figure>
+                        <h6>CCTV Installation</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="serv-det">
+                        <figure class="imghvr-fade">
+                            <img src="assets/images/services/s2.jpg" alt="">
+                            <figcaption>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis magna
+                                odio, eu vehicula augue suscipit ac. Pellentesque quis dui lorem. Vestibulum sed blandit
+                                diam,
+                            </figcaption>
+                        </figure>
+                        <h6>Home Automation</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="serv-det">
+                        <figure class="imghvr-fade">
+                            <img src="assets/images/services/s3.jpg" alt="">
+                            <figcaption>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis magna
+                                odio, eu vehicula augue suscipit ac. Pellentesque quis dui lorem. Vestibulum sed blandit
+                                diam,
+                            </figcaption>
+                        </figure>
+                        <h6>Home & Office Security</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--###################### About Company Starts Here ############################-->
+    <!-- <section class="with-medical">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <img src="assets/images/about.jpg" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12 txtr">
+                    <h4>Why choos Health Care with <br>
+                        <span>Medical Hospital</span>
+                    </h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque libero, pulvinar et elementum quis, facilisis eu ante. Mauris non placerat sapien. Pellentesque tempor arcu non odio scelerisque ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.</p>
+                    <p>Ut ultricies lacus a rutrum mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta dolor quis felis pulvinar dignissim. Etiam nisl ligula, ullamcorper non metus vitae, maximus efficitur mi. Vivamus ut ex ullamcorper, scelerisque lacus nec, commodo dui. Proin massa urna, volutpat vel augue eget, iaculis tristique dui. </p>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!--###################### Key Features Starts Here ##########################-->
+    <div class="key-features container-fluid">
+        <div class="container">
+            <div class="session-title row">
+                <h2>Key Features</h2>
+                <p>Main feature of our system is detecting fight scenes
+from surveillance cameras in a fast and accurate way to safe the lives </p>
+            </div>
+            <div class="key-row row">
+                <div class="col-md-3">
+                    <div class="key-single">
+                        <i class="fas fa-fingerprint"></i>
+                        <h6>High Security</h6>
+                        <p>Our system is providing high security for people to detect violent activities(fight) in public
+areas and enable quick action against them  </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="key-single">
+                        <i class="fas fa-user-lock"></i>
+                        <h6>People Protection</h6>
+                        <p> Our approach is to give people safety in public area in order to automatically warn the public
+officers and enable quick action against them </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="key-single">
+                        <i class="fas fa-video"></i>
+                        <h6>Remote Monitoring</h6>
+                        <p>Our system is monitoring the surveillance camera's for detection fight in public ares to protect the public from any incident</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="key-single">
+                        <i class="far fa-folder-open"></i>
+                        <h6>Full Backup of Information</h6>
+                        <p>We can save all of the data in our database with date and time. And create backup for any inquiry.,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}

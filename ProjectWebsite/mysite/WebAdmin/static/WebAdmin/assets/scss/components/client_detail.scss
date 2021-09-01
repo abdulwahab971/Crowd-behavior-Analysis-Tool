@@ -1,0 +1,18 @@
+.client-container{
+    @include big-padding();
+    .client-row{
+        .br{
+            border-right: 1px solid #cccccc61;
+        }
+        .bb{
+            border-bottom: 1px solid #cccccc61;
+        }
+        .clinent-cover{
+            padding: 30px 20px;
+            text-align: center;
+            &:hover{
+                @include shado-1();
+            }
+        }
+    }
+}

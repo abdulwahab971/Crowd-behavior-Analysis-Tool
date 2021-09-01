@@ -1,0 +1,73 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+    <!--###################### Slider Starts Here ############################-->
+
+    <div class="page-title titl-2">
+        <div class="container">
+            <div class="row">
+                <h2>Live Streams</h2>
+                <p> Home <i class="fas fa-angle-double-right"></i> Live Streams </p>
+            </div>
+        </div>
+    </div>
+
+    <!--###################### Cameras ############################-->
+    <div class="services-container container-fluid">
+        <div class="container sess-in-cont">
+            <div class="session-title row">
+                <h2>Live Streams</h2>
+                <p> You can see the live streams on our website. </p>
+            </div>
+            <div class="sess-row row">
+                <div class="col-md-4">
+                    <div class="serv-det">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% url 'facecam_feed' %}">
+                            <div class="card-body" >
+                              <h5 class="card-title">Camera 1</h5>
+                              <p class="card-text">This Camera 1 is placed in University ground</p>
+                              <a href="{% url 'live-stream' %}" class="btn btn-secondary stretched-link">Open In New Screen</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% url 'facecam_feed' %}">
+                        <div class="card-body">
+                          <h5 class="card-title">Camera 2</h5>
+                          <p class="card-text">This Camera 2 is placed in University Hall</p>
+                          <a href="{% url 'live-stream' %}" class="btn btn-secondary stretched-link">Open In New Screen</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="serv-det">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% url 'facecam_feed' %}">
+                            <div class="card-body">
+                              <h5 class="card-title">Camera 3</h5>
+                              <p class="card-text">This Camera 3 is placed in University parking</p>
+                              <a href="{% url 'live-stream' %}" class="btn btn-secondary stretched-link">Open In New Screen</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--###################### Footer Starts Here ############################-->
+
+
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<body>
+
+<form method="POST" class="ml-auto mt-5 w-50 ">
+    {% csrf_token %}
+<div class="  w-50 d-flex align-items-end ">
+<input  class="btn btn btn-dark mt-5" name="dateHTML"  type="date" id="date-input" value='{%if submitbutton == "Submit" %} {%endif%}'  required />
+
+<button class="btn btn btn-dark ml-2" type="Submit"  name="Submit" value="Submit">Submit</button>
+</div>
+</form>
+{%if submitbutton == "Submit" %}
+
+ <div class=" ml-5 w-50">
+     <div><p>{{datepython}}</p>
+</div>
+{% for a in address %}
+
+
+
+  <video
+    id="my"
+    class="video-js mt-5"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster=""
+    data-setup="{}"
+  >
+     <source src="{% static a %}" type='video/mp4' />
+
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+    </p>
+  </video>
+{% endfor %}
+  </div>
+
+
+{% else %}
+
+
+
+
+
+    <div class="mt-5 ml-5">
+{% for a in address %}
+
+
+  <video
+    id="my-video"
+    class="video-js mt-5"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster=""
+    data-setup="{}"
+  >
+     <source src="{% static a %}" type='video/mp4' />
+
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+    </p>
+  </video>
+{% endfor %}
+  </div>
+   <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+{%endif%}
+    {% endblock content %}
+

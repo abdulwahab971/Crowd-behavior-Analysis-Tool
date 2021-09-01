@@ -1,0 +1,32 @@
+[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption{
+    background-color: RGBA(33,111,255,0.87);
+}
+.services-container{
+    
+    margin-top: -100px;
+    @media screen and (max-width: 600px){
+        margin-top: 0px;
+    }
+    padding-bottom: 30px;
+    .sess-in-cont{
+        background-color: #FFF;
+        padding: 20px 30px;
+        box-shadow: 0 0px 5px rgba(0,0,0,.1), 0 5px 20px rgba(0,0,0,0.1);
+        .sess-row{
+            margin-top: 20px;
+            .serv-det{
+                figure{
+                  border-radius: 10px;  
+                }
+                figcaption{
+                    font-size: .8rem;
+                }
+                h6{
+                    font-size: .9rem;
+                    padding: 6px;
+                }
+            }
+        }
+    }
+    
+}

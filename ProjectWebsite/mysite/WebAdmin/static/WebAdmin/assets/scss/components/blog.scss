@@ -1,0 +1,43 @@
+.blog-container{
+   background-color: #cccccc2e;
+    @include big-padding();
+    padding-bottom: 100px;
+    .news-row{
+        margin-top: 20px;
+        .news-card{
+            display: flex;
+               
+            background-color: #FFF;
+            box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35);
+            margin-bottom: 20px;
+            .detail{
+                padding: 10px;
+                margin: auto;
+                
+                h3{
+                    font-size: 1.1rem;
+                    font-family: $mouse-400;
+                    margin-bottom: 0px;
+                }
+                p{
+                    font-size: .85rem;
+                    text-indent: 20px;
+                    text-align: justify
+                }
+                .footp{
+                    text-indent: 0px;
+                    background-color: #f2f6f7a1;
+                    margin-top: 5px;
+                    font-size: .8rem;
+                    span{
+                        padding: 0px 5px;
+                    }
+                }
+            }
+            &:hover{
+                @include shado-1();
+            }
+        }
+    }
+}
+   

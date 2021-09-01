@@ -1,0 +1,23 @@
+.key-features{
+    background-color: #f8f8f8;
+    @include big-padding();
+    padding-bottom: 170px;
+    .key-row{
+        margin-top: 20px;
+        .key-single{
+            margin-bottom: 20px;
+            i{
+               color: #3987FF; 
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            h6{
+                color: #444;
+            }
+            p{
+                font-size: .8rem;
+                margin-top: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+
+
+<!doctype html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <title> Smart Security </title>
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{% static 'WebAdmin/assets/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'WebAdmin/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'WebAdmin/assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'WebAdmin/assets/plugins/image-hover/imagehover.min.css' %}">
+    <link rel="stylesheet" href="{% static 'WebAdmin/assets/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'WebAdmin/assets/css/style.css' %}" />
+
+
+    <script src="https://kit.fontawesome.com/e4ad24ebff.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+{% if user.is_authenticated %}
+
+
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+
+<a class="log ml-5" href="{%url 'WebAdmin-home'%}">
+    <img src="{% static 'WebAdmin/assets/images/logo.png'%}" width="200" height="50" class="d-inline-block align-top" alt="">
+
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-1 mt-lg-0 ml-5">
+      <li class="nav-item ">
+        <a class="nav-link" href="{%url 'WebAdmin-home'%}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'WebAdmin-livestream'%}">Live Stream</a>
+      </li>
+         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'displayvideo' %}">Videos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'WebAdmin-services' %}">Services</a>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'WebAdmin-contactus' %}">Contact us</a>
+      </li>
+
+        <li class="nav-item ">
+        <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+      </li>
+
+        <li class="nav-item ">
+        <a class="nav-item nav-link" href="{% url 'logout'%}">Logout</a>
+      </li>
+
+
+    </ul>
+  </div>
+
+
+
+</nav>
+
+<div class="col-md-8">
+            {%if messages%}
+                {%for message in messages%}
+                <div class="alert alert-{{message.tags}}">
+                    {{message}}
+                </div>
+                {%endfor%}
+            {%endif%}
+
+        </div>
+
+{% else %}
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+
+<a class="log ml-5" href="{%url 'login'%}">
+    <img src="{% static 'WebAdmin/assets/images/logo.png'%}" width="200" height="50" class="d-inline-block align-top" alt="">
+
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+  </div>
+<div class="navbar-nav">
+
+
+    <a class="nav-item nav-link" href="{% url 'register'%}">Register</a>
+    <a class="nav-item nav-link" href="{% url 'login'%}">Login</a>
+</div>
+
+
+
+
+
+</nav>
+
+<div class="container-fluid">
+            {%if messages%}
+                {%for message in messages%}
+                <div class="alert alert-{{message.tags}}">
+                    {{message}}
+                </div>
+                {%endfor%}
+            {%endif%}
+
+        </div>
+
+{%endif%}
+
+
+
+
+{% block content %}{% endblock %}
+
+
+
+
+    <!--###################### Footer Starts Here ############################-->
+{% if user.is_authenticated %}
+
+<footer>
+   <div class="foot-det">
+
+
+    <div class="container foot-cont">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="foot-about">
+                    <h4>Smart Security</h4>
+                    <p>Smart security is a software that can help security to detect violent activities(fight) and then enable quick action against them </p>
+                    <ul>
+                            <li><a><i class="fab fa-github"></i></a></li>
+                            <li><a><i class="fab fa-linkedin-in"></i></a></li>
+                            <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a><i class="fab fa-twitter"></i></a></li>
+                            <li> <a><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="col-md-4 menu-foot">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="{%url 'WebAdmin-home'%}">Home</a></li>
+                    <li><a href="{% url 'WebAdmin-livestream'%}">Live Stream</a></li>
+                    <li><a href="{% url 'WebAdmin-services' %}">Services</a></li>
+                    <li><a href="{% url 'WebAdmin-contactus' %}">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 cont-foot">
+                <h4>Contacts</h4>
+                <h5>+92 3229712787</h5>
+                <p>Rangpura Sialkot, Pakistan</p>
+                <a href="">smartsecurity12@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <p> All Rights Reserved | Designed and Developed by <a href="{%url 'WebAdmin-home'%}">www.Smartsecurity.com</a></p>
+        </div>
+    </div>
+    </div>
+</footer>
+
+{% else %}
+
+{% endif %}
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js'"></script>
+<script src="{% static 'WebAdmin/assets/js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'WebAdmin/assets/js/popper.min.js'%}"></script>
+<script src="{% static 'WebAdmin/assets/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'WebAdmin/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js'%}"></script>
+
+<script src="{% static 'WebAdmin/assets/js/script.js'%}"></script>
+
+
+</html>

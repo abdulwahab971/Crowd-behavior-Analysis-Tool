@@ -1,0 +1,14 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Registration is closed" %}{% endblock %}
+
+{% block content %}
+  <div class="alert alert-info m-3">
+          Sorry, but registration is closed at this moment. Come back later.
+      </div>
+
+
+{% endblock %}

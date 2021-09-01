@@ -1,0 +1,45 @@
+
+.btn-success{
+	background-color: #223d50;
+	border-color: #223d50;
+	&:hover{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+	}
+	&:active{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+	}
+	&:focus{
+		background-color: #223d50 !important;
+		border-color: #223d50 !important;
+		box-shadow: none !important;
+	}
+}
+.btn-primary{
+	background-color: $color-primary;
+	border-color: $color-primary;
+	&:hover{
+		background-color: $color-primary !important;
+		border-color: $color-primary !important;
+	}
+	&:active{
+		background-color: $color-primary !important;
+		border-color: $color-primary !important;
+	}
+	&:focus{
+		background-color: $color-primary !important;
+		border-color: $color-primary !important;
+		box-shadow: none !important;
+	}
+}
+.btn{
+	@include card-1();
+}
+.btn-outline-primary{
+    border-radius: 50px;
+    padding: 5px 25px;
+    color: $color-primary;
+    border-color: $color-primary;
+    font-family: $mouse-500;
+}

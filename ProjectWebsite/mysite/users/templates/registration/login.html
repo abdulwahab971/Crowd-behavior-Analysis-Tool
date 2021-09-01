@@ -1,0 +1,86 @@
+{% extends "WebAdmin/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{% trans "Log in" %}{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+        <div class="alert alert-info m-3">
+          You are Already Logged in
+        </div>
+
+{% else %}
+
+    <div class="content-section mt-5 ml-5 d-flex justify-content-center w-75">
+        <form method="POST" class="ml-5 w-75">
+            {% csrf_token %}
+            <fieldset class="form-group ml-5">
+                <legend class="border-bottom mb-4">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group ml-5">
+                <button class="btn btn btn-dark" value="{% trans 'Log in' %}" type="submit">Login</button>
+                <div class="mt-2">
+                <small class="text-muted d-flex justify-content-end">
+                    <a href="{% url 'auth_password_reset' %}">Forgot Password?</a>
+                </small>
+                    <div class="border-top pt-3  d-flex justify-content-end">
+            <small class="text-muted">
+                Need An Account? <a class="ml-7" href="{% url 'registration_register' %}">Sign Up Now</a>
+            </small>
+        </div>
+            </div>
+        </form>
+
+    </div>
+{%endif%}
+{% endblock content %}
+
+{% comment %}
+
+
+
+
+
+
+{% block content %}
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="{% trans 'Log in' %}" />
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+<p>hello</p>
+<p>{% trans "Forgot your password?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>.</p>
+<p>{% trans "Not a member?" %} <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>.</p>
+{% endblock %}
+
+**registration/login.html**
+
+It's your responsibility to provide the login form in a template called
+registration/login.html by default. This template gets passed four
+template context variables:
+
+``form``
+    A Form object representing the login form. See the forms
+    documentation for more on Form objects.
+
+``next``
+    The URL to redirect to after successful login. This may contain a
+    query string, too.
+
+``site``
+    The current Site, according to the SITE_ID setting. If you don't
+    have the site framework installed, this will be set to an instance
+    of RequestSite, which derives the site name and domain from the
+    current HttpRequest.
+
+``site_name``
+    An alias for site.name. If you don't have the site framework
+    installed, this will be set to the value of
+    request.META['SERVER_NAME']. For more on sites, see The
+    "sites" framework.
+{% endcomment %}

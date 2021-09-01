@@ -1,0 +1,26 @@
+{% extends "WebAdmin/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<br>
+    <div class="content-section m-5 ">
+      <div class="media mt-5">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body align-self-center ml-5">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+       <form method="POST" enctype="multipart/form-data" class="mt-5">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"><h1>Update User</h1></legend>
+                {{ u_form|crispy}}
+                {{ p_form|crispy}}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn btn-dark" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

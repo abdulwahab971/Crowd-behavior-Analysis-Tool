@@ -1,0 +1,33 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Logged out" %}{% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="alert alert-info m-3">
+        <h2>Logged Out</h2>
+        <p>You have been Successfully Logged Out</p>
+
+</div>
+<div class="border-top pt-3 m-3">
+            <small class="text-muted">
+             <a href="{% url 'login'%}">Log In Now</a>
+            </small>
+        </div>
+
+
+{% else %}
+<div class="alert alert-info m-3">
+          You are not logged in
+        </div>
+<div class="border-top pt-3 m-3">
+            <small class="text-muted">
+             <a href="{% url 'login'%}">Log In Now</a>
+            </small>
+        </div>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends "WebAdmin/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container h-25 align-items-end d-flex ">
+        <legend class="border-bottom d-flex justify-content-center">Real Time Detetion</legend>
+    </div>
+<div class="container justify-content-center d-flex">
+	<img src="{% url 'facecam_feed' %}">
+</div>
+
+
+<div class=" mt-5 justify-content-center d-flex ">
+    <button onclick="fun()" class="btn btn btn-danger">Generate Alert</button>
+</div>
+
+<script>
+let i = 0;
+while (i<100){
+var obj=document.getElementById("Fighting_Status")
+var txt=document.createTextNode({{read}})
+obj.appendChild(txt)
+i++
+}
+function fun(){
+alert("Alert generated")
+
+}
+
+</script>
+
+
+    {% endblock content %}
+
